@@ -1,11 +1,10 @@
 <header id="main-header" class="the-header the-origin-header">
-
 			<div class="container">
 				<div class="row">
 
 					<div class="col-lg-12">
 
-						<a href="/" class="logo"><img src="images/logo.png" alt="Urip Logo"></a>
+						<a href="/" class="logo"><%= image_tag 'logo.png', alt: 'Stilt Media' %></a>
 						<!-- Your Logo -->
 
 						<a href="#0" id="nav-menu-trigger" class="menu-toggle flip pull-right all-caps">Menu<span class="icon-menu5"></span></a> <!-- Menu Toggle -->
@@ -14,8 +13,7 @@
 
 				</div> <!--/ .row -->
 			</div> <!--/ .container -->
-
-	  	</header>
+</header>
 	  	<!--
 		=========================
 		==/ END HEADER CONTENT ==
@@ -34,30 +32,11 @@
 
 			<ul id="main-nav" class="main-nav all-caps">
 				<li class="current"><a href="#hero">Home</a></li>
-				<li><a href="#what-we-do">What We Do</a></li>
-				<li><a href="#our-features">Our Features</a></li>
-				<li><a href="#pricing">Pricing</a></li>
-				<li><a href="#our-team">The Team</a></li>
+				<li><a href="#who-we-are">Who We Are</a></li>
+				<li><a href="#our-work">Our Work</a></li>
+        <li><a href="#our-services">Our Services</a></li>
 				<li><a href="#customer-story">Customers</a></li>
-				<li class="dropdown">
-					<a class="external" href="#0">
-						Dropdown
-					</a>
-					<ul class="dropdown-menu">
-						<li><a href="#0">Some Submenu</a></li>
-						<li><a href="#0">And More</a></li>
-					</ul>
-				</li>
 			</ul> <!--/ .main-nav -->
-
-			<ul class="secondary-nav">
-				<li><a href="#0">About This Template</a></li>
-				<li><a href="#0">Privacy Policy</a></li>
-				<li><a href="#0">Terms of Service</a></li>
-				<li><a href="#0">Legal</a></li>
-				<li><a href="#0">Careers</a></li>
-				<li><a class="contact-trigger">Contact Us</a></li>
-			</ul> <!--/ .secondary-nav -->
 
 		</nav>
 		<!--
@@ -97,7 +76,7 @@
 
 												<div class="embed-responsive embed-responsive-16by9" data-sr="enter bottom over 1s and move 75px">
 
-													<img src="images/logo-hero.png" alt="" class="img-responsive" />
+													<%= image_tag 'logo-hero.png', class: 'img-responsive' %>
 
 												</div> <!--/ .embed-responsive -->
 
@@ -186,37 +165,37 @@
 						<div class="client-logo">
 							<div class="the-logo col-lg-2 col-md-2 col-sm-3 col-xs-12">
 
-								<a href="#0"><img src="images/client/makeawish.png" alt="Client Logo" data-sr="scale up 30% wait .2s"/></a>
+								<a href="#0"><%= image_tag 'makeawish.png', :data => {sr: 'scale up 30% wait .2s'} %></a>
 
 							</div> <!--/ .the-logo -->
 
 							<div class="the-logo col-lg-2 col-md-2 col-sm-3 col-xs-12">
 
-								<a href="#0"><img src="images/client/prime.png" alt="Client Logo" data-sr="scale up 30% wait .2s"/></a>
+								<a href="#0"><%= image_tag 'prime.png', :data => {sr: 'scale up 30% wait .2s'} %></a>
 
 							</div> <!--/ .the-logo -->
 
 							<div class="the-logo col-lg-2 col-md-2 col-sm-3 col-xs-12">
 
-								<a href="#0"><img src="images/client/paradigm.png" alt="Client Logo" data-sr="scale up 30% wait .5s"/></a>
+								<a href="#0"><%= image_tag 'paradigm.png', :data => {sr: 'scale up 30% wait .2s'} %></a>
 
 							</div> <!--/ .the-logo -->
 
 							<div class="the-logo col-lg-2 col-md-2 col-sm-3 col-xs-12">
 
-								<a href="#0"><img src="images/client/conor.png" alt="Client Logo" data-sr="scale up 30% wait .7s"/></a>
+								<a href="#0"><%= image_tag 'conor.png', :data => {sr: 'scale up 30% wait .2s'} %></a>
 
 							</div> <!--/ .the-logo -->
 
 							<div class="the-logo col-lg-2 col-md-2 col-sm-3 col-xs-12">
 
-								<a href="#0"><img src="images/client/waa.png" alt="Client Logo" data-sr="scale up 30% wait .9s"/></a>
+								<a href="#0"><%= image_tag 'waa.png', :data => {sr: 'scale up 30% wait .2s'} %></a>
 
 							</div> <!--/ .the-logo -->
 
 							<div class="the-logo col-lg-2 col-md-2 col-sm-3 col-xs-12">
 
-								<a href="#0"><img src="images/client/swimshow.png" alt="Client Logo" data-sr="scale up 30% wait 1.1s"/></a>
+								<a href="#0"><%= image_tag 'swimshow.png', :data => {sr: 'scale up 30% wait .2s'} %></a>
 
 							</div> <!--/ .the-logo -->
 
@@ -229,7 +208,7 @@
 			</section>
 
 
-			<section id="our-features">
+			<section id="who-we-are">
 
 				<div class="container">
 					<div class="row">
@@ -262,7 +241,7 @@
 
 
 
-			<section id="our-team" class="gray-bg">
+			<section id="our-work" class="gray-bg">
 
 				<div class="container-fluid">
 					<div class="row">
@@ -285,103 +264,18 @@
 
 								<a href="#0" id="mobile-team-filter" class="mobile-filter-select visible-xs"><h4 class="all-caps">all<span class="icon-chevron-thin-down"></span></h4></a>
 
-								<ul class="filter">
+								<!-- <ul class="filter">
 									<li class="current all"><a href="#0">Everyone</a></li>&bull;
 									<li class="manager"><a href="#0">Manager</a></li>&bull;
 									<li class="developer"><a href="#0">Developer</a></li>&bull;
 									<li class="designer"><a href="#0">Designer</a></li>&bull;
 									<li class="marketing"><a href="#0">Marketing</a></li>&bull;
 									<li class="support"><a href="#0">Support</a></li>
-								</ul> <!--/ .filter -->
+								</ul> -->
 
-							</div> <!--/ .col-lg-3 -->
+							</div>
 
-							<!-- BEGIN Team Photos -->
-							<div class="col-lg-12 col-md-12">
-
-								<div class="row">
-
-									<ul id="team_grid">
-
-										<li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 team-item no-padding" data-type="manager developer" data-id="id-1">
-
-											<div class="team-item-content">
-
-												<img src="images/team-photo/270x320.png" alt="Team Photo"/>
-
-
-											</div> <!--/ .team-item-content -->
-
-										</li> <!--/ .team-item -->
-
-										<li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 team-item no-padding" data-type="manager marketing designer" data-id="id-2">
-
-											<div class="team-item-content">
-
-												<img src="images/team-photo/270x320.png" alt="Team Photo"/>
-
-											</div> <!--/ .team-item-content -->
-
-										</li> <!--/ .team-item -->
-
-										<li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 team-item no-padding" data-type="designer developer" data-id="id-3">
-
-											<div class="team-item-content">
-
-												<img src="images/team-photo/270x320.png" alt="Team Photo"/>
-
-											</div> <!--/ .team-item-content -->
-
-										</li> <!--/ .team-item -->
-
-										<li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 team-item no-padding" data-type="marketing support" data-id="id-4">
-
-											<div class="team-item-content">
-
-												<img src="images/team-photo/270x320.png" alt="Team Photo"/>
-
-											</div> <!--/ .team-item-content -->
-
-										</li> <!--/ .team-item -->
-
-										<li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 team-item no-padding" data-type="marketing support" data-id="id-5">
-
-											<div class="team-item-content">
-
-												<img src="images/team-photo/270x320.png" alt="Team Photo"/>
-
-											</div> <!--/ .team-item-content -->
-
-										</li> <!--/ .team-item -->
-
-										<li class="col-lg-4 col-md-4 col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3 team-item" data-type="support" data-id="id-6">
-
-											<div class="team-item-content">
-
-												<img src="images/team-photo/270x320.png" alt="Team Photo"/>
-
-												<div class="team-info centered">
-
-													<h6>Mike Doe</h6>
-													<small>An experienced Web/UX Designer on a mission to use his God-given gifts in design to help others.<br/><br class="visible-lg visible-xs"/>He has worked with people in many different countries, and from many different industries. </small>
-													<ul class="team-social">
-														<li><a href="#0"><span class="icon-link2"></span></a></li>
-														<li><a href="#0"><span class="icon-linkedin2"></span></a></li>
-														<li><a href="#0"><span class="icon-twitter"></span></a></li>
-													</ul> <!--/ .team-social -->
-
-												</div> <!--/ .team-info -->
-
-											</div> <!--/ .team-item-content -->
-
-										</li> <!--/ .team-item -->
-
-									</ul> <!--/ #team_grid -->
-
-								</div> <!--/ .row -->
-
-							</div> <!--/ .col-lg-9 -->
-							<!-- END Team Photos -->
+							<% render "welcome/work" %>
 
 						</div>
 						<!--BEGIN The Team Wrapper -->
@@ -396,7 +290,7 @@
 			===========================
 			-->
 
-			<section id="our-features">
+			<section id="our-services">
 
 				<div class="container">
 
@@ -536,7 +430,7 @@
 										<div class="vertical-center-table">
 											<div class="vertical-center-content">
 
-												<img class="customer-logo" src="images/client/conor.png" alt="Customer Logo" data-sr="scale up 30%" /> <!--/ .customer-logo -->
+                        <%= image_tag 'conor.png', class: 'customer-logo', data: {sr: 'scale up 30%'} %>
 
 											</div>
 										</div>
@@ -557,7 +451,7 @@
 										<div class="vertical-center-table">
 											<div class="vertical-center-content">
 
-												<img class="customer-logo" src="images/client/outer.png" alt="Customer Logo" data-sr="scale up 30% wait .2s"/> <!--/ .customer-logo -->
+                        <%= image_tag 'outer.png', class: 'customer-logo', data: {sr: 'scale up 30% wait .2s'} %>
 
 											</div>
 										</div>
@@ -579,7 +473,7 @@
 										<div class="vertical-center-table">
 											<div class="vertical-center-content">
 
-												<img class="customer-logo" src="images/client/gloss.png" alt="Customer Logo" data-sr="scale up 30% wait .4s"/> <!--/ .customer-logo -->
+                        <%= image_tag 'gloss.png', class: 'customer-logo', data: {sr: 'scale up 30% wait .4s'} %>
 
 											</div>
 										</div>

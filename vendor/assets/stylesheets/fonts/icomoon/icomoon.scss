@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('icomoon.eot?gr0n8n');
-	src:url('icomoon.eot?#iefixgr0n8n') format('embedded-opentype'),
-		url('icomoon.woff?gr0n8n') format('woff'),
-		url('icomoon.ttf?gr0n8n') format('truetype'),
-		url('icomoon.svg?gr0n8n#icomoon') format('svg');
+	src:url('fonts/icomoon/icomoon.eot?gr0n8n');
+	src:url('fonts/icomoon/icomoon.eot?#iefixgr0n8n') format('embedded-opentype'),
+		url('fonts/icomoon/icomoon.woff?gr0n8n') format('woff'),
+		url('fonts/icomoon/icomoon.ttf?gr0n8n') format('truetype'),
+		url('fonts/icomoon/icomoon.svg?gr0n8n#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -4446,4 +4446,3 @@
 .icon-IcoMoon:before {
 	content: "\eaea";
 }
-
