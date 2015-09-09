@@ -1127,7 +1127,7 @@ a.overlay-close {
 	right: 30px;
 	width: 48px;
 	height: 48px;
-	background: url("../images/cd-icon-close.svg") no-repeat center center;
+	background: image-url("cd-icon-close.svg") no-repeat center center;
 	overflow: hidden;
 	text-indent: 100%;
 	white-space: nowrap;
@@ -1737,6 +1737,9 @@ a.menu-toggle span {
 	padding: 0;
 	height: 100vh;
 	color: #fff;
+}
+#thanks {
+	@extend #hero;
 }
 
 .color-overlay {
