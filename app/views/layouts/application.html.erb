@@ -29,7 +29,8 @@
   </main>
 
   <%= render 'layouts/footer' %>
-  <%= render 'welcome/projects' %>
+  <%= render(:partial => 'projects') if (params[:action] == 'index') %>
+  <%# render 'welcome/projects' %>
 
   <%= javascript_include_tag 'application-btm' %>
 
