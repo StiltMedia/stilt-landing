@@ -20,6 +20,9 @@
 
 </head>
 <body>
+  <% if (params[:action] == 'thanks') %>
+    <%= render 'layouts/gremark' %>
+  <% end %>
 
   <%= render 'layouts/header' %>
   <%= render 'layouts/nav' %>
