@@ -2889,6 +2889,10 @@ ul.team-social li a {
 	margin-top: 5px;
 }
 
+img.customer-logo {
+	max-width: 200px;
+}
+
 ul.customer-logos {
 	display: -ms-flexbox;
 	display: -webkit-flex;
@@ -2929,6 +2933,9 @@ ul.customer-logos .vertical-center-content {
 	top: 5%;
 	padding: 0 30px;
 	opacity: 0;
+}
+.customer-quote.smallq {
+	top: 25%;
 }
 
 .customer-quote:before {
