@@ -6,3 +6,28 @@
 @import "style";
 @import "style-responsive";
 @import "expandableGallery";
+
+
+.hero-btn {
+  text-align: center;
+  margin: 0 auto;
+  display: block;
+  padding: 10px;
+  border: white solid 1px;
+  border-radius: 6px;
+  color: white;
+  text-transform: uppercase;
+  width: 100%;
+  font-size: 12px;
+  transition: .2s all;
+  background: transparent;
+  &:hover {background: white;color:#f0493e;}
+}
+
+@media (max-width:736px) {
+  .embed-responsive-16by9 {padding-bottom: 35%;}
+  .hero-btn {margin-bottom: 15px;width: 50%;}
+  .hero-content .margin-top-140 {margin-top: 40px !important;}
+  .hero-content img {margin: 0 auto;}
+  .the-logo img {margin: 0 auto 20px;}
+}
