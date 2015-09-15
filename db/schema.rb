@@ -11,10 +11,61 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150909154336) do
+ActiveRecord::Schema.define(version: 20150915160222) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "approaches", force: :cascade do |t|
+    t.string   "approach"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "case_studies", force: :cascade do |t|
+    t.string   "name"
+    t.string   "tagline"
+    t.text     "description"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "featured_image_file_name"
+    t.string   "featured_image_content_type"
+    t.integer  "featured_image_file_size"
+    t.datetime "featured_image_updated_at"
+  end
+
+  create_table "case_studies_categories", id: false, force: :cascade do |t|
+    t.integer "case_study_id"
+    t.integer "category_id"
+  end
+
+  add_index "case_studies_categories", ["case_study_id", "category_id"], name: "case_studies_categories_index", unique: true, using: :btree
+
+  create_table "case_study_with_digital_marketings", force: :cascade do |t|
+    t.string   "name"
+    t.string   "tagline"
+    t.text     "description"
+    t.text     "conclusion"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.string   "featured_image_file_name"
+    t.string   "featured_image_content_type"
+    t.integer  "featured_image_file_size"
+    t.datetime "featured_image_updated_at"
+  end
+
+  create_table "case_study_with_digital_marketings_categories", id: false, force: :cascade do |t|
+    t.integer "case_study_with_digital_marketing_id"
+    t.integer "category_id"
+  end
+
+  add_index "case_study_with_digital_marketings_categories", ["case_study_with_digital_marketing_id", "category_id"], name: "case_study_with_digital_marketings_categories_index", unique: true, using: :btree
+
+  create_table "categories", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "contacts", force: :cascade do |t|
     t.string   "first_name"
@@ -25,6 +76,12 @@ ActiveRecord::Schema.define(version: 20150909154336) do
     t.text     "message"
     t.datetime "created_at",    null: false
     t.datetime "updated_at",    null: false
+  end
+
+  create_table "goals", force: :cascade do |t|
+    t.string   "goal"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

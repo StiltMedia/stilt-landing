@@ -28,6 +28,8 @@ gem 'bootstrap-sass', '~> 3.3.5.1'
 gem 'autoprefixer-rails'
 gem 'rails_12factor', '~> 0.0.3'
 gem 'awesome_print', '~> 1.6.1'
+gem 'paperclip', '~> 4.3.1'
+gem 'rails_admin', '~> 0.7.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
@@ -49,6 +51,7 @@ group :development, :test do
 
   gem 'better_errors', '~> 2.1.1'
   gem 'binding_of_caller', '~> 0.7.2'
+  gem 'habtm_generator'
 
 end
 
