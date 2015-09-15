@@ -30,10 +30,11 @@
   <%= yield %>
 
   <%= render 'layouts/footer' %>
-  <%= render(:partial => 'projects') if (params[:action] == 'index') %>
+  <%= render 'welcome/projects' %>
   <%# render 'welcome/projects' %>
 
   <%= javascript_include_tag 'application-btm' %>
+  <%= render(:partial => 'owl') if (params[:action] == 'show') %>
 
 </body>
 </html>

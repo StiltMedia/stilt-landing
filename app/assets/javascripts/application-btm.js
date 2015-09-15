@@ -1,6 +1,8 @@
 //= require jquery
 //= require jquery_ujs
+//= require jquery-1.9.1.min
 //= require bootstrap-sprockets
+//= require owl.carousel.min
 //= require SmoothScroll.min
 //= require classie.min
 //= require jquery.nav.min

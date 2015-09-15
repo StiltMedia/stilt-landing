@@ -50,12 +50,13 @@
               <div class="margin-top-60"></div>
               <div class="row">
                 <div class="post-thumbnail">
-                  <a href="#0" title="Pellentesque Tortor Sem Elit Cras Quam Ligula Aenean Consectetur">
-                    <img src="https://unsplash.it/1170/775/?image=668" alt="post thumbnail" />
-                  </a>
+                  <div class="owl-carousel">
+                    <% @case.pictures.each do |pic| %>
+                      <div class="item"><%= image_tag pic.image.url(:retina) %></div>
+                    <% end %>
+                  </div>
                 </div>
               </div>
-
             </div>
           </article>
         </div>

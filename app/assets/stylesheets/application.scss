@@ -1,5 +1,7 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "owl.carousel";
+@import "owl.theme";
 @import "icomoon";
 @import "swipebox";
 @import "animate.min";
@@ -7,6 +9,9 @@
 @import "style-responsive";
 @import "style-blog";
 @import "expandableGallery";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 
 
 .hero-btn {
@@ -25,10 +30,21 @@
   &:hover {background: white;color:#f0493e;}
 }
 
+.owl-controls {
+  position: absolute;
+  width: 100%;
+  top: 45%;
+  color: white;
+  padding: 0 15px;
+  .owl-prev {float: left;}
+  .owl-next {float: right;}
+}
+
 @media (max-width:736px) {
   .embed-responsive-16by9 {padding-bottom: 35%;}
   .hero-btn {margin-bottom: 15px;width: 50%;}
   .hero-content .margin-top-140 {margin-top: 40px !important;}
   .hero-content img {margin: 0 auto;}
   .the-logo img {margin: 0 auto 20px;}
+  .owl-controls {top: 30%;}
 }

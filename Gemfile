@@ -30,6 +30,7 @@ gem 'rails_12factor', '~> 0.0.3'
 gem 'awesome_print', '~> 1.6.1'
 gem 'paperclip', '~> 4.3.1'
 gem 'rails_admin', '~> 0.7.0'
+gem 'font-awesome-sass'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
