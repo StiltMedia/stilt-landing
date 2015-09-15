@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150915170102) do
+ActiveRecord::Schema.define(version: 20150915185915) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,6 +33,10 @@ ActiveRecord::Schema.define(version: 20150915170102) do
     t.string   "featured_image_content_type"
     t.integer  "featured_image_file_size"
     t.datetime "featured_image_updated_at"
+    t.string   "thumbnail_file_name"
+    t.string   "thumbnail_content_type"
+    t.integer  "thumbnail_file_size"
+    t.datetime "thumbnail_updated_at"
   end
 
   create_table "case_studies_categories", id: false, force: :cascade do |t|
@@ -64,6 +68,10 @@ ActiveRecord::Schema.define(version: 20150915170102) do
     t.string   "results_content_type"
     t.integer  "results_file_size"
     t.datetime "results_updated_at"
+    t.string   "thumbnail_file_name"
+    t.string   "thumbnail_content_type"
+    t.integer  "thumbnail_file_size"
+    t.datetime "thumbnail_updated_at"
   end
 
   create_table "case_study_with_digital_marketings_categories", id: false, force: :cascade do |t|
