@@ -11,15 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150915160222) do
+ActiveRecord::Schema.define(version: 20150915170102) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "approaches", force: :cascade do |t|
     t.string   "approach"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+    t.integer  "case_study_with_digital_marketing_id"
   end
 
   create_table "case_studies", force: :cascade do |t|
@@ -41,6 +42,13 @@ ActiveRecord::Schema.define(version: 20150915160222) do
 
   add_index "case_studies_categories", ["case_study_id", "category_id"], name: "case_studies_categories_index", unique: true, using: :btree
 
+  create_table "case_studies_pictures", id: false, force: :cascade do |t|
+    t.integer "case_study_id"
+    t.integer "picture_id"
+  end
+
+  add_index "case_studies_pictures", ["case_study_id", "picture_id"], name: "case_studies_pictures_index", unique: true, using: :btree
+
   create_table "case_study_with_digital_marketings", force: :cascade do |t|
     t.string   "name"
     t.string   "tagline"
@@ -52,6 +60,10 @@ ActiveRecord::Schema.define(version: 20150915160222) do
     t.string   "featured_image_content_type"
     t.integer  "featured_image_file_size"
     t.datetime "featured_image_updated_at"
+    t.string   "results_file_name"
+    t.string   "results_content_type"
+    t.integer  "results_file_size"
+    t.datetime "results_updated_at"
   end
 
   create_table "case_study_with_digital_marketings_categories", id: false, force: :cascade do |t|
@@ -60,6 +72,13 @@ ActiveRecord::Schema.define(version: 20150915160222) do
   end
 
   add_index "case_study_with_digital_marketings_categories", ["case_study_with_digital_marketing_id", "category_id"], name: "case_study_with_digital_marketings_categories_index", unique: true, using: :btree
+
+  create_table "case_study_with_digital_marketings_pictures", id: false, force: :cascade do |t|
+    t.integer "case_study_with_digital_marketing_id"
+    t.integer "picture_id"
+  end
+
+  add_index "case_study_with_digital_marketings_pictures", ["case_study_with_digital_marketing_id", "picture_id"], name: "case_study_with_digital_marketings_pictures_index", unique: true, using: :btree
 
   create_table "categories", force: :cascade do |t|
     t.string   "name"
@@ -80,8 +99,18 @@ ActiveRecord::Schema.define(version: 20150915160222) do
 
   create_table "goals", force: :cascade do |t|
     t.string   "goal"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                           null: false
+    t.datetime "updated_at",                           null: false
+    t.integer  "case_study_with_digital_marketing_id"
+  end
+
+  create_table "pictures", force: :cascade do |t|
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
 end

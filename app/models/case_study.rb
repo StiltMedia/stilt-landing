@@ -1,4 +1,5 @@
 class CaseStudy < ActiveRecord::Base
+  has_and_belongs_to_many :pictures
   has_and_belongs_to_many :categories
 
   has_attached_file :featured_image,
