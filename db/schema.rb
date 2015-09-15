@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150915185915) do
+ActiveRecord::Schema.define(version: 20150915194500) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -37,7 +37,10 @@ ActiveRecord::Schema.define(version: 20150915185915) do
     t.string   "thumbnail_content_type"
     t.integer  "thumbnail_file_size"
     t.datetime "thumbnail_updated_at"
+    t.string   "slug"
   end
+
+  add_index "case_studies", ["slug"], name: "index_case_studies_on_slug", using: :btree
 
   create_table "case_studies_categories", id: false, force: :cascade do |t|
     t.integer "case_study_id"
@@ -72,7 +75,10 @@ ActiveRecord::Schema.define(version: 20150915185915) do
     t.string   "thumbnail_content_type"
     t.integer  "thumbnail_file_size"
     t.datetime "thumbnail_updated_at"
+    t.string   "slug"
   end
+
+  add_index "case_study_with_digital_marketings", ["slug"], name: "index_case_study_with_digital_marketings_on_slug", using: :btree
 
   create_table "case_study_with_digital_marketings_categories", id: false, force: :cascade do |t|
     t.integer "case_study_with_digital_marketing_id"

@@ -27,9 +27,7 @@
   <%= render 'layouts/header' %>
   <%= render 'layouts/nav' %>
 
-  <main id="main-content" class="hero-form-layout" style="margin-bottom: 204px;">
-    <%= yield %>
-  </main>
+  <%= yield %>
 
   <%= render 'layouts/footer' %>
   <%= render(:partial => 'projects') if (params[:action] == 'index') %>

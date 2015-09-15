@@ -1,10 +1,13 @@
 Rails.application.routes.draw do
-
+ 
 
   mount RailsAdmin::Engine => '/stilt-admin', as: 'rails_admin'
   root 'welcome#index'
   get '/thanks' => 'welcome#thanks'
+
+  resources :clients, only: [:show]
   resources :contact
+
 
 
 

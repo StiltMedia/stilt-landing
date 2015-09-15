@@ -12,15 +12,11 @@ class CaseStudyWithDigitalMarketing < ActiveRecord::Base
 
     :styles => {
       :admin    => ['100x100#',  :jpg, :quality => 70],
-      :thumb    => ['380x380#',  :jpg, :quality => 70],
-      :preview  => ['500x500#',  :jpg, :quality => 70],
       :retina   => ['1920>',     :jpg, :quality => 100]
     },
 
     :convert_options => {
       :admin    => '-set colorspace sRGB -strip',
-      :thumb    => '-set colorspace sRGB -strip',
-      :preview  => '-set colorspace sRGB -strip',
       :retina   => '-set colorspace sRGB -strip -sharpen 0x0.5'
     }
 
