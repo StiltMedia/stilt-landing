@@ -40,6 +40,13 @@
   .owl-next {float: right;}
 }
 
+.team-item-content a {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+}
+
 @media (max-width:736px) {
   .embed-responsive-16by9 {padding-bottom: 35%;}
   .hero-btn {margin-bottom: 15px;width: 50%;}

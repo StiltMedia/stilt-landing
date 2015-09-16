@@ -51,16 +51,14 @@
 				<div class="the-team-wrapper">
 					<div class="col-lg-12 col-md-12">
 						<a href="#0" id="mobile-team-filter" class="mobile-filter-select visible-xs"><h4 class="all-caps">all<span class="icon-chevron-thin-down"></span></h4></a>
-						<!-- <ul class="filter">
-							<li class="current all"><a href="#0">Everyone</a></li>&bull;
-							<li class="manager"><a href="#0">Manager</a></li>&bull;
-							<li class="developer"><a href="#0">Developer</a></li>&bull;
-							<li class="designer"><a href="#0">Designer</a></li>&bull;
-							<li class="marketing"><a href="#0">Marketing</a></li>&bull;
-							<li class="support"><a href="#0">Support</a></li>
-						</ul> -->
+						<ul class="filter">
+							<li class="current all"><a href="#0">All</a></li>
+							<% @category.each do |cat| %>
+								<li class="<%= cat.name %>" style="text-transform:capitalize;"><a href="#0"><%= cat.name %></a></li>
+							<% end %>
+						</ul>
 					</div>
-					<% render "welcome/work" %>
+					<%= render "welcome/work" %>
 				</div>
 			</div>
 		</div>
