@@ -2,7 +2,7 @@
   <div class="row">
     <ul id="team_grid">
       <% @case.each do |c| %>
-        <li class="col-lg-3 col-md-3 col-sm-4 col-xs-12 team-item no-padding" data-type="<% c.categories.each do |cat|%><%= cat.name %> <% end %>" data-id="id-<%= c.id %>" style="position:relative;">
+        <li class="col-lg-3 col-md-3 col-sm-4 col-xs-12 team-item no-padding" data-type="<% c.categories.each do |cat|%><%= cat.name.parameterize %> <% end %>" data-id="id-<%= c.id %>" style="position:relative;">
           <div class="team-item-content">
             <%= link_to '', "/clients/#{c.slug}" %>
             <%= image_tag c.thumbnail.url(:thumb), alt: c.name %>

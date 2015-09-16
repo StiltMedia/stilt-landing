@@ -54,7 +54,7 @@
 						<ul class="filter">
 							<li class="current all"><a href="#0">All</a></li>
 							<% @category.each do |cat| %>
-								<li class="<%= cat.name %>" style="text-transform:capitalize;"><a href="#0"><%= cat.name %></a></li>
+								<li class="<%= cat.name.parameterize %>" style="text-transform:capitalize;"><a href="#0"><%= cat.name %></a></li>
 							<% end %>
 						</ul>
 					</div>
