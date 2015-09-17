@@ -68,3 +68,22 @@
 	<%= render 'welcome/testimonials' %>
 
 </main>
+
+
+<script charset="utf-8">
+  $("#new_contact").validate({
+    rules: {
+      "contact[first_name]": {required: true},
+			"contact[last_name]": {required: true},
+			"contact[business_name]": {required: true},
+      "contact[email]": {email:true, required: true}
+    }
+    // messages: {
+    //   example5: "Just check the box<h5 class='text-error'>You aren't going to read the EULA</h5>"
+    // },
+    // tooltip_options: {
+    //   example4: {trigger:'focus'},
+    //   example5: {placement:'right',html:true}
+    // },
+  });
+</script>

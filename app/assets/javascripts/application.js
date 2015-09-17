@@ -11,3 +11,7 @@
 // about supported directives.
 //
 //= require modernizr
+//= require jquery-1.9.1.min
+//= require jquery.validate.min
+// require jquery-validate.bootstrap-tooltip.min
+//= require additional-methods.min
