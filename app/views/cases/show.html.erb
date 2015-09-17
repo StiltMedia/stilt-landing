@@ -1,0 +1,138 @@
+<main id="main-content" class="blog-layout" style="margin-bottom: 204px;">
+  <section id="hero" style="background: url('<%= @case.featured_image.url(:retina) %>');background-size: cover;background-position: center center;">
+    <div class="color-overlay">
+      <div class="container">
+        <div class="vertical-center-wrapper">
+          <div class="vertical-center-table">
+            <div class="vertical-center-content">
+              <div class="hero-content row centered">
+                <div class="col-lg-12">
+                  <h1 class="all-caps text-shadow-medium blog-title"><%= @case.name %></h1>
+                  <div class="blog-meta">
+                    <ul>
+                      <% @case.categories.each do |cat| %>
+                        <li>
+                          <%= cat.name %>
+                        </li>
+                      <% end %>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="post-thumbnail">
+            <div class="owl-carousel">
+              <% @case.pictures.each do |pic| %>
+                <div class="item"><%= image_tag pic.image.url(:retina) %></div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="margin-top-100"></div>
+    <hr>
+    <div class="margin-top-100"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <article class="post">
+            <div class="post-content">
+
+              <div class="row">
+                <div class="col-lg-12 centered">
+                  <p class="section-title" style="text-transform:capitalize;">Digital Marketing</p>
+                  <h3 class="section-heading"><%= raw @case.tagline %></h3>
+                  <br>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 centered">
+                  <div class="entry-content">
+                    <p><%= @case.description %></p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="top-client" class="centered">
+    <div class="container">
+      <div class="row vertical-align-row">
+        <div class="col-sm-4 centered min-170">
+          <h3>Goals</h3>
+          <ul>
+            <% @case.goals.each do |app| %>
+              <li><%= app.goal %></li>
+            <% end %>
+          </ul>
+        </div>
+        <div class="col-sm-4 centered min-170">
+          <h3>Approaches</h3>
+          <ul>
+            <% @case.approaches.each do |app| %>
+              <li><%= app.approach %></li>
+            <% end %>
+          </ul>
+        </div>
+        <div class="col-sm-4 centered">
+          <h3>3 Month Results</h3>
+          <%= image_tag @case.results.url(:preview), class: 'img-responsive' %>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="blog">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <article class="post">
+            <div class="post-content">
+              <div class="row">
+                <div class="col-lg-12 centered">
+                  <h3 class="section-heading">Conclusion</h3>
+                  <br>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm-10 col-sm-offset-1 centered">
+                  <div class="entry-content">
+                    <p><%= @case.conclusion %></p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="top-client" class="centered">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 centered">
+          <a href="/#our-work"><i class="fa fa-arrow-left"></i> Back to Case Studies</a>
+        </div>
+        <div class="clearfix"></div>
+      </div>
+    </div>
+  </section>
+</main>

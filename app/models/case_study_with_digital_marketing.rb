@@ -1,5 +1,8 @@
 class CaseStudyWithDigitalMarketing < ActiveRecord::Base
 
+  validates :slug, uniqueness: true, presence: true
+  before_validation :generate_slug
+
   has_many :goals
   has_many :approaches
 
@@ -62,5 +65,34 @@ class CaseStudyWithDigitalMarketing < ActiveRecord::Base
     :presence => true,
     :size => { :in => 0..10.megabytes },
     :content_type => { :content_type => /^image\/(jpeg|png|gif|tiff)$/ }
+
+
+
+    rails_admin do
+      edit do
+        field :name
+        field :categories
+        field :tagline
+        field :featured_image
+        field :thumbnail
+        field :description
+        field :approaches
+        field :goals
+        field :results
+        field :conclusion
+        field :pictures
+        fields do
+          help false
+        end
+      end
+    end
+
+    def to_param
+      slug # or "#{id}-#{name}".parameterize
+    end
+
+    def generate_slug
+      self.slug ||= name.parameterize
+    end
 
 end

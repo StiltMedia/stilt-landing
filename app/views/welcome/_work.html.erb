@@ -9,6 +9,14 @@
           </div>
         </li>
       <% end %>
+      <% @study.each do |c| %>
+        <li class="col-lg-2 col-md-2 col-sm-3 col-xs-12 team-item no-padding" data-type="<% c.categories.each do |cat|%><%= cat.name.parameterize %> <% end %>" data-id="id-<%= c.id %>" style="position:relative;">
+          <div class="team-item-content">
+            <%= link_to '', "/cases/#{c.slug}" %>
+            <%= image_tag c.thumbnail.url(:thumb), alt: c.name %>
+          </div>
+        </li>
+      <% end %>
 
       <!-- <li class="col-lg-2 col-md-2 col-sm-2 col-xs-6 team-item no-padding" data-type="manager marketing designer" data-id="id-2">
         <div class="team-item-content">

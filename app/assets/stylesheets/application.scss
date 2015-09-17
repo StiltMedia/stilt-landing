@@ -34,7 +34,7 @@
   position: absolute;
   width: 100%;
   top: 45%;
-  color: white;
+  color: black;
   padding: 0 15px;
   .owl-prev {float: left;}
   .owl-next {float: right;}
@@ -49,6 +49,13 @@
 
 .team-item {
   margin-bottom: 0px;
+}
+
+.vertical-align-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
 @media (max-width:736px) {
