@@ -1,0 +1,14 @@
+<h1>Stilt Landing Lead</h1>
+<hr>
+<br>
+<h3>Information:</h3>
+<p><b>First Name:</b> <%= @contact.first_name %></p>
+<p><b>Last Name:</b> <%= @contact.last_name %></p>
+<p><b>Email:</b> <%= @contact.email %></p>
+<% unless @contact.phone.blank? %>
+<p><b>Phone:</b> <%= @contact.phone %></p>
+<% end %>
+<% unless @contact.business_name.blank? %>
+<p><b>Company:</b> <%= @contact.business_name %></p>
+<% end %>
+<p><b>Message:</b> <%= @contact.message %></p>
